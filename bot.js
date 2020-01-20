@@ -6,6 +6,70 @@ client.on('ready', () => {
   console.log('I am ready!');
 });
 
+client.on('message', async message => {
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+
+	const querystring = require('querystring');
+
+	if (command === 'urban') {
+	if (!args.length) {
+		return message.channel.send('You need to supply a search term!');
+	}
+
+		const query = querystring.stringify({ term: args.join(' ') });
+
+	const { list } = await fetch(`https://api.urbandictionary.com/v0/define?${query}`).then(response => response.json());
+	message.channel.send(list[0].definition);
+	}
+});
+
+client.on('message', async message => {
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+	if (command === 'pracownicy') {
+		const { nickname } = await fetch('http://mathelusz.ct8.pl/lsrp/api.php').then(response => response.json());
+		message.channel.send(garage[0].nickname);
+}
+});
+
+client.on('message', async message => {
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+	if (command === 'kot') {
+		const { file } = await fetch('https://aws.random.cat/meow').then(response => response.json());
+		message.channel.send(file);
+}
+});
+
+client.on('message', async message => {
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+	if (command === 'pies') {
+		const { url } = await fetch('https://random.dog/woof.json').then(response => response.json());
+		message.channel.send(url);
+}
+});
+
+client.on('message', async message => {
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+	if (command === 'test') {
+		const { message } = await fetch('https://dog.ceo/api/breeds/image/random').then(response => response.json());
+		message.channel.send(message);
+}
+});
+
 client.on('message', message => {
     if (message.content === '/awatar') {
       let embed = new Discord.RichEmbed()
