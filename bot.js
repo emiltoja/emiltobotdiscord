@@ -131,8 +131,8 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
-  if (message.content === 'karren') {
-    message.channel.send('KarreN? chyba KaeN . . .  ');
+  if (message.content === 'nati') {
+    message.channel.send('kc ');
   }
 });
 client.on('message', message => {
@@ -141,8 +141,8 @@ client.on('message', message => {
 	
 });
 client.on('message', message => {
-  if (message.content === 'Karren') {
-    message.channel.send('KarreN? chyba KaeN . . .  ');
+  if (message.content === 'pati') {
+    message.channel.send('kc ');
   }
 });
 client.on('message', message => {
