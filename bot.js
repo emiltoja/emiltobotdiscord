@@ -106,22 +106,22 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
-  if (message.content === 'czeesc <@510094801052631040>') {
+  if (message.content === 'czeesc) {
     message.channel.send("no hej, " + message.author + " jak leci?");
   }
 });
 client.on('message', message => {
-  if (message.content === 'dobranoc <@510094801052631040>') {
+  if (message.content === 'dobranoc') {
     message.channel.send("dobranoc " + message.author + " miłych snów!!");
   }
 });
 client.on('message', message => {
-  if (message.content === 'dziendobry <@510094801052631040>') {
+  if (message.content === 'dziendobry') {
     message.channel.send("dzień dobry " + message.author + " udanego dnia!!");
   }
 });
 client.on('message', message => {
-  if (message.content === 'daj nudeska <@510094801052631040>') {
+  if (message.content === 'daj nudeska') {
     message.channel.send("zboczuchu ty, wczoraj ci wyslalam :suck:");
   }
 });
@@ -132,7 +132,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'nati') {
-    message.channel.send('kc ');
+    message.channel.send('kcccccccc ');
   }
 });
 client.on('message', message => {
@@ -142,7 +142,7 @@ client.on('message', message => {
 });
 client.on('message', message => {
   if (message.content === 'pati') {
-    message.channel.send('kc ');
+    message.channel.send('kcccccc ');
   }
 });
 client.on('message', message => {
@@ -186,6 +186,16 @@ client.on('message', message => {
   }
 });
 client.on('message', message => {
+  if (message.content === 'pati daj nudesa') {
+    message.channel.send('zdradzasz mnie?');
+  }
+});
+client.on('message', message => {
+  if (message.content === 'nati daj nudesa') {
+    message.channel.send('zdradzasz mnie?');
+  }
+});
+client.on('message', message => {
   if (message.content === 'chuj') {
     message.channel.send('twuj stary pijany');
   }
@@ -219,7 +229,7 @@ client.on('ready', () => {
     client.user.setStatus('available') // Can be 'available', 'idle', 'dnd', or 'invisible'
     client.user.setPresence({
         game: {
-            name: 'emiltounban',
+            name: 'huj',
             type: 0
         }
     });
